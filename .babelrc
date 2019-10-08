@@ -1,0 +1,6 @@
+{
+    "presets": [["@babel/preset-env",
+                { "useBuiltIns": "usage" }],//按需引入polyfill
+                "@babel/preset-react"],
+    "plugins": ["@babel/plugin-transform-runtime"]
+}
