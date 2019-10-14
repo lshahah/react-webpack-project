@@ -50,8 +50,6 @@
 ├── .eslint.js
 ├── .eslintignore
 ├── .gitignore
-|── postcss.config.js
-│── package.json
 │── yarn.lock
 ├── webpack.base.config.js      #webpack基础配置
 ├── webpack.dev.config.js       # 开发环境的webpack配置
