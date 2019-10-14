@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-// const App = (<h2>Hello World!</h2>)
+import App from 'containers/App/App';
+
 
 ReactDOM.render(
-    <App/>,
+    <App />,
     document.querySelector('#root')
-)
+);

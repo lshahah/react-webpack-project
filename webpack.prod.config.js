@@ -2,8 +2,10 @@
 const path = require("path");
 const merge = require('webpack-merge');
 const commonConfig = require('./webpack.base.config.js');
-const PurgecssPlugin = require('purgecss-webpack-plugin')
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const glob = require("glob-all");
+const PurifyCSS = require("purifycss-webpack");
 const WorkboxPlugin = require('workbox-webpack-plugin') // 引入 PWA 插件
 const AddAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin');
 
@@ -28,11 +30,6 @@ module.exports = merge(commonConfig, {
         },
     },
     plugins: [
-        // 清除无用 css---生产环境---csstree-shaking
-        // new ExtractTextPlugin('[name].css?[hash]'),
-        // new PurgecssPlugin({
-        //     paths: glob.sync(`${PATHS.src}/*`)
-        // }),
         //做一个缓存，当服务器挂了之后，你依然能够访问这个网页 pwa
         new WorkboxPlugin.GenerateSW({
             clientsClaim: true,

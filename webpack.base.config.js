@@ -61,7 +61,7 @@ module.exports = {
             loader: "url-loader",
             options: {
                 outputPath: "images/", // 图片输出的路径
-                limit: 10 * 1024
+                limit: 2 * 1024
             }
         }
       },
@@ -71,7 +71,8 @@ module.exports = {
         use: [
           {
             loader: "happypack/loader?id=happyBabel"
-          }
+          },
+          {loader:'eslint-loader'}
         ]
       },
     ]
@@ -81,10 +82,13 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html', // 最终创建的文件名
-      template: path.join(__dirname, 'src/index.html') // 指定模板路径
+      template: path.join(__dirname, 'src/index.html'),// 指定模板路径
+      favicon: './src/assets/favicons/favicon.ico',
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[hash:8].css'
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+      // publicPath:path.join(__dirname,'dist/css')
     }), //打包抽离css
   
     new HappyPack({
@@ -102,8 +106,10 @@ module.exports = {
     extensions: [".js", ".jsx",],//顺序查找，自动补全后缀
     alias: {
       "@": path.join(__dirname, "src"),
-      pages: path.join(__dirname, "src/pages"),
-      router: path.join(__dirname, "src/router")
+     assets:path.join(__dirname,"src/assets"),
+     components:path.join(__dirname,"src/components"),
+     containers:path.join(__dirname,"src/containers"),
+     reduxs:path.join(__dirname,"src/reduxs")
     }
   },
 }
