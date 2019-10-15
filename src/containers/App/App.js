@@ -1,9 +1,9 @@
 import React from 'react';
-import './app.scss';
+import style from './app.scss';
 
 function App() {
     return (
-        <div className="content">
+        <div className={style.content}>
             初始化项目
         </div>
     );

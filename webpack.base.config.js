@@ -11,8 +11,7 @@ module.exports = {
   output: {
     // 输出目录
     path: path.join(__dirname, "dist"),
-    // 文件名称
-    // filename: "bundle.js"
+    // filename: "js/bundle.js"
   },
   module: {
     rules: [
@@ -68,11 +67,14 @@ module.exports = {
       { //处理ES6，react，vue
         test: /\.m?js$/,
         exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: [
           {
-            loader: "happypack/loader?id=happyBabel"
+            loader: "happypack/loader?id=happyBabel",
           },
-          {loader:'eslint-loader'}
+          {
+            loader:'eslint-loader'
+          },
         ]
       },
     ]
@@ -86,7 +88,7 @@ module.exports = {
       favicon: './src/assets/favicons/favicon.ico',
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "css/[name].css",
       chunkFilename: "[id].css"
       // publicPath:path.join(__dirname,'dist/css')
     }), //打包抽离css
