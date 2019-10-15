@@ -12,8 +12,8 @@ module.exports = merge(commonConfig, {
     devtool: 'cheap-module-source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[contenthash].js',
-        chunkFilename: '[name].[contenthash].js'
+        filename: 'js/[name].[contenthash].js',
+        chunkFilename: 'js/[name].[contenthash].js'
     },
     // 代码分割,提取公告文件
     optimization: {

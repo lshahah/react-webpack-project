@@ -90,7 +90,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
       chunkFilename: "[id].css"
-      // publicPath:path.join(__dirname,'dist/css')
+     
     }), //打包抽离css
   
     new HappyPack({
