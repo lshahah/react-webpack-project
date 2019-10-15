@@ -62,6 +62,6 @@
 1. git clone **** 到本地
 2. cd ****  进入项目目录
 3. 执行 cnpm install 下载项目依赖 （注意：node-sass模块下载缓慢，如果下载失败请先翻墙再下载）
-4. yarn run build:dll 抽离静态公共资源，在run build前一步执行
-   yarn run build 打包生产环境的压缩包，供上线使用
-   yarn run dev 会开启本地服务运行项目 项目地址为： http://localhost:3000
+4. ①yarn run build:dll 抽离静态公共资源，（在run build前一步执行）；
+   ②yarn run build 打包生产环境的压缩包，供上线使用；
+   ③yarn run dev 会开启本地服务运行项目 项目地址为： http://localhost:3000；
