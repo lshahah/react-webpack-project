@@ -24,7 +24,6 @@ module.exports = merge(commonConfig, {
         },
     },
     plugins: [
-      
         //做一个缓存，当服务器挂了之后，你依然能够访问这个网页 pwa
         new WorkboxPlugin.GenerateSW({
             clientsClaim: true,

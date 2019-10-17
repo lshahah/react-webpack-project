@@ -21,6 +21,7 @@ module.exports = merge(commonConfig, {
         host: '127.0.0.1',
         port: 3000,
         historyApiFallback: true,
+        // 跨域访问；
         proxy: {
             "/api":"http://localhost:3000"
         }
