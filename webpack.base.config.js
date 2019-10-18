@@ -18,6 +18,8 @@ module.exports = {
       // 处理scss
       {
         test: /\.(sc|sa|c)ss$/,
+        exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: [
           //分离提取css文件
           MiniCssExtractPlugin.loader,
@@ -31,7 +33,9 @@ module.exports = {
               }
             }
           },
-          "fast-sass-loader", // 将 Sass 编译成 CSS
+          {
+            loader:"fast-sass-loader",
+          }, // 将 Sass 编译成 CSS
           {
             loader: "postcss-loader", 
           },
