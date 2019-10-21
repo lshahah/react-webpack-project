@@ -2,7 +2,6 @@
 * @desc 静态公共资源打包配置
 */
 
-
 const path = require('path')
 const webpack = require('webpack')
 const src = path.resolve(process.cwd(), 'src'); // 源码目录
@@ -12,7 +11,7 @@ module.exports = {
     mode: 'production',
     entry: {
         // 定义程序中打包公共文件的入口文件vendor.js
-        vendor:['react','react-dom','react-router-dom']
+        vendor:['react','react-dom','react-router-dom', 'redux', 'react-redux', 'tinper-bee']
     },
 
     output: {
