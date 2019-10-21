@@ -13,6 +13,7 @@ module.exports = {
     path: path.join(__dirname, "dist"),
     // filename: "js/bundle.js"
   },
+  devtool: 'source-map',
   module: {
     rules: [
       // 处理scss

@@ -7,7 +7,6 @@ const webpack = require("webpack");
 module.exports = merge(commonConfig, {
     mode: "development",
     entry: './src/index.js',
-    devtool: 'cheap-module-eval-soure-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js', //输出文件名
