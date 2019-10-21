@@ -45,6 +45,7 @@ module.exports = {
       // 处理字体
       {
         test: /\.(eot|woff2?|ttf|svg)$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'url-loader',
@@ -60,6 +61,7 @@ module.exports = {
       // 处理图片
       {
         test: /\.(png|jpg|jpeg|gif|svg)/,
+        exclude: /node_modules/,
         use: {
             loader: "url-loader",
             options: {
