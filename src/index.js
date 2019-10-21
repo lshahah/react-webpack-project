@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import App from 'containers/App/App';
-import HomePage from 'containers/HomePage/Homepage';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducers from 'reduxs/reducers/index';
+import HomePage from 'containers/HomePage/HomePage';
 
-
+const store = createStore(reducers);
 ReactDOM.render(
-    <HomePage />,
+    <Provider store={store}>
+        <HomePage />
+    </Provider>,
     document.querySelector('#root')
 );
