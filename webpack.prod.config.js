@@ -5,6 +5,7 @@ const commonConfig = require('./webpack.base.config.js');
 const WorkboxPlugin = require('workbox-webpack-plugin') // 引入 PWA 插件
 const AddAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin');
 const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = merge(commonConfig, {
     mode: "production",
@@ -24,6 +25,7 @@ module.exports = merge(commonConfig, {
         },
     },
     plugins: [
+        new BundleAnalyzerPlugin(),
         //做一个缓存，当服务器挂了之后，你依然能够访问这个网页 pwa
         new WorkboxPlugin.GenerateSW({
             clientsClaim: true,
@@ -33,6 +35,7 @@ module.exports = merge(commonConfig, {
         new AddAssetHtmlWebpackPlugin({
             filepath: path.resolve('./dll/vendor-manifest.json')
         }),
+        //处理冗余代码；
         new ParallelUglifyPlugin({
             // 传递给 UglifyJS 的参数
             uglifyJS: {

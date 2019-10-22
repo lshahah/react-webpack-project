@@ -43,7 +43,7 @@ module.exports = {
         ]
       },
 
-      // 处理字体
+      // 处理字体图标
       {
         test: /\.(eot|woff2?|ttf|svg)$/,
         exclude: /node_modules/,

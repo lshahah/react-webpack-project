@@ -27,7 +27,6 @@ module.exports = {
             context: process.cwd(),
             // manifest.json文件的输出位置
             path: path.resolve(__dirname,'dll','[name]-manifest.json'),
-
             // 定义打包的公共vendor文件对外暴露的函数名
             name: '[name]_[hash]'
         }),
