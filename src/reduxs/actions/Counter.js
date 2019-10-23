@@ -1,4 +1,6 @@
 // 产生action的函数;
+import axios from 'axios';
+
 const INCREASE = 'INCREASE';
 const DECREASE = 'DECREASE';
 
@@ -12,4 +14,14 @@ const sub = () => (
         type: DECREASE
     }
 );
-export { INCREASE, DECREASE, add, sub };
+const getData = () => (
+   async (dispatch) => {
+       await axios.get('111').then((res) => {
+        dispatch({
+            type: getData,
+            data: res
+        });
+       });
+   }
+);
+export { INCREASE, DECREASE, add, sub, getData };

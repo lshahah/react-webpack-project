@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import App from 'containers/App/App';
 import Counter from 'containers/Counter/Counter';
+import style from './HomePage.scss';
 
 const routes = [
     {
@@ -25,7 +26,7 @@ function HomePage() {
 return (
     <div>
         <Router>
-            <div>
+            <div className={style.nav}>
                 <Link to="/App">APP</Link>
                 <Link to="/App/Counter">Counter</Link>
                 <Link to="/bubblegum">test</Link>

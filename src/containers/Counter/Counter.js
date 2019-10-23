@@ -11,9 +11,10 @@ class Counter extends Component {
     }
 
     render() {
+        const { value } = this.props;
         return (
             <div>
-                <span>{this.props.value}</span>
+                <span>{value}</span>
                 <br />
                 <button type="button" onClick={this.props.add}>Increase</button>
                 <button type="button" onClick={this.props.sub}>Decrease</button>
