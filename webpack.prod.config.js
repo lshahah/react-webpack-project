@@ -5,6 +5,7 @@ const commonConfig = require('./webpack.base.config.js');
 const WorkboxPlugin = require('workbox-webpack-plugin') // 引入 PWA 插件
 const AddAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin');
 const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
+// const Copy = require('copy-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = merge(commonConfig, {
