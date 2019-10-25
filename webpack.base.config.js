@@ -47,9 +47,6 @@ module.exports = {
       // 处理css资源
       {
         test: /\.css$/,
-        include: [
-          path.resolve(__dirname, 'node_modules/tinper-bee'),
-        ],
         use: [
           MiniCssExtractPlugin.loader,
           {

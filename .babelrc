@@ -2,5 +2,8 @@
     "presets": [["@babel/preset-env",
                 { "useBuiltIns": "usage" }],//按需引入polyfill
                 "@babel/preset-react"],
-    "plugins": ["@babel/plugin-transform-runtime"]
+    "plugins": [
+        "@babel/plugin-transform-runtime",
+        ["import", { "libraryName": "tinper-bee", "libraryDirectory": "lib","style": "true"}, "tinper-bee"] //按需打包组件，而非打入整个组件库；
+    ]
 }

@@ -11,7 +11,7 @@ module.exports = {
     mode: 'production',
     entry: {
         // 定义程序中打包公共文件的入口文件vendor.js
-        vendor:['react','react-dom','react-router-dom', 'redux', 'react-redux', 'tinper-bee']
+        vendor:['react','react-dom','react-router-dom', 'redux', 'react-redux','tinper-bee']
     },
 
     output: {
