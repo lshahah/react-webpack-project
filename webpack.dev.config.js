@@ -14,6 +14,7 @@ module.exports = merge(commonConfig, {
     },
     devServer: {
         hot: true,
+        overlay: true,
         //  contentbase代表html页面所在的相对目录，如果不配置项，
         // devServer默认html所在的目录就是项目的根目录，
         contentBase: path.resolve(__dirname, 'dist'),
