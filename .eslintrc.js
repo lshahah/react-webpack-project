@@ -27,6 +27,8 @@ module.exports = {
         "no-underscore-dangle": 0,
         "no-plusplus": 0,
         "react/destructuring-assignment": 0,
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
         "max-len": [
             "error",
             {
@@ -38,7 +40,7 @@ module.exports = {
         "import/no-cycle": 0
     },
     "parser": "babel-eslint",
-    "plugins": ['react'],
+    "plugins": ['react',"react-hooks"],
     "env": {
         "browser": true,
         "node": true
