@@ -1,0 +1,17 @@
+.container{
+    display: grid;
+    width: 500px;
+    // fr 关键字，两列宽度分别为 1fr 2fr 说明第一列是第二列的2倍；
+    // repeat说明重复的次数；
+    // auto-fill 自适应布局；
+    grid-template-columns: repeat(auto-fill,200px);
+    grid-template-rows: repeat(3,100px);
+    div {
+        background-color: burlywood;
+        p{
+            text-align: center;
+            height: 200px;
+            line-height: 100px;
+        }
+    }
+}
