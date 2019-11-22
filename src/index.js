@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from 'reduxs/reducers/index';
 import thunk from 'redux-thunk';
-import HomePage from 'containers/HomePage/HomePage';
+import HomePage from 'containers/HomePage/Homepage';
 // import './index.scss';
 
 const store = createStore(reducers, applyMiddleware(thunk));
