@@ -18,7 +18,7 @@ module.exports = {
     rules: [
       // 处理scss
       {
-        test: /\.(sc|sa|c)ss$/,
+        test:/\.s[ac]ss$/i,
         exclude: /node_modules/,
         use: [
           //分离提取css文件
